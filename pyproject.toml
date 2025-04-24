@@ -1,0 +1,18 @@
+[project]
+name = "checking-out-writer-ai-studio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12, <3.13"
+dependencies = [
+    "writer>=0.8.2",
+]
+
+[dependency-groups]
+dev = [
+  "ipython>=9.1.0",
+  "mypy>=1.15.0",
+  "pylint>=3.3.6",
+  "ruff>=0.11.6",
+  "wat-inspector>=0.4.3",
+]
