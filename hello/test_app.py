@@ -9,11 +9,13 @@ class TestApp:
     def before(self):
         os.chdir(os.path.dirname(__file__))
         import main
+
         self.app_state = main.initial_state
         yield
 
     def test_handle_timer_tick(self):
         import main
+
         main.handle_timer_tick(self.app_state)
         df1 = self.app_state["random_df"].to_dict()
         main.handle_timer_tick(self.app_state)
@@ -22,6 +24,7 @@ class TestApp:
 
     def test_metrics(self):
         import main
+
         data = {
             "weight_g": [3000, 3500, 3200, 3100, 2900, 3300],
             "length_cm": [50, 52, 51, 48, 47, 53],
